@@ -77,8 +77,8 @@ df2$time = c(sel.meta1$time,sel.meta2$time)  # Add the time information to the a
 ```
 ```R
 # calculate pairwise distances between cells after MSMA
-MSMA_bulk_human_2_humanOrg_check.rpair_dist = apply(df2[df2$data=='human',c(3:5)],1,function(x) {
-        d = apply(df2[df2$data=='organoid',c(3:5)],1,function(y) eu.dist(x,y))
+pair_dist = apply(df2[df2$data=='sample1',c(3:5)],1,function(x) {
+        d = apply(df2[df2$data=='sample2',c(3:5)],1,function(y) eu.dist(x,y))
 })
 
 row.names(pair_dist)=row.names(ps.mat2)
@@ -92,8 +92,10 @@ cols2 = c(brewer.pal(9,'YlOrRd')[c(2:9)],brewer.pal(11,'BrBG')[rev(1:4)]);names(
 annot2=columnAnnotation(O_time=factor(ps.time2,levels=unique(ps.time2)),col=list(O_time=cols2))
 
 sim_mat = t(sim_dist)
+pdf('hmtp.pdf')
 Heatmap(sim_mat,name='human_vs_humanOrg',show_row_names=F,show_column_names=F,cluster_rows=F,cluster_columns=F,
 left_annotation=annot1,top_annotation=annot2,col=colorRamp2(c(0.8,max(sim_dist)),c('white','red')))
+dev.off()
 ```
 ### Step 4: Visualization
 Use the aligned matrix to draw 3D scatter plots for human and organoid,visualize the time information of each point in color.
