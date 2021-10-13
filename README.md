@@ -1,6 +1,5 @@
 # human-organoid-bulk
 ## Software Requirements
-![image](https://github.com/cyang433/human-organoid/blob/main/hmtp.pdf)
 The analysis is based on R 4.0. 
 Users should install the following packages prior to using the code:
 ```R
@@ -98,6 +97,8 @@ Heatmap(sim_mat,name='human_vs_humanOrg',show_row_names=F,show_column_names=F,cl
 left_annotation=annot1,top_annotation=annot2,col=colorRamp2(c(0.8,max(sim_dist)),c('white','red')))
 dev.off()
 ```
+<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/hmtp_00.png"/></div>
+
 ### Step 4: Visualization
 Use the aligned matrix to draw 3D scatter plots for human and organoid,visualize the time information of each point in color.
 ```R
