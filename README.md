@@ -1,5 +1,6 @@
 # human-organoid-bulk
 ## Software Requirements
+![image](https://github.com/cyang433/human-organoid/blob/main/hmtp.pdf)
 The analysis is based on R 4.0. 
 Users should install the following packages prior to using the code:
 ```R
