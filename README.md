@@ -131,7 +131,7 @@ res = data.frame(df2[df2$data=='sample2',])
 #res = data.frame(df2)
 res0 = data.frame(df2)
 library(plot3D)
-pdf('3D2.pdf',width=10)
+pdf('3D2.pdf')
 s3d<-scatter3D(x=res[,3],y=res[,4],z=res[,5],pch=24,col='gray',bg=time.cols2[as.numeric(mapvalues(res$time,names(table(res$time)),c(1:12)))],colkey=F,theta = 300, phi = 30,cex=2,lwd=1,
 xlim=c(min(res0$Val0),max(res0$Val0)),
 ylim=c(min(res0$Val1),max(res0$Val1)),
@@ -141,6 +141,8 @@ legend("top", legend = levels(as.factor(res$data)), pch = c(16, 17),inset = -0.1
 legend("right", legend = levels(as.factor(res$time)), col = c(time.cols2),pch=16,inset = -0.05, xpd = TRUE, horiz = F,cex=1.2)
 dev.off()
 ```
+<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D2_00.png"/></div>
+
 Finally,draw the corrplot on timepoint wise averaged similarity.
 ```R
 library(corrplot)
