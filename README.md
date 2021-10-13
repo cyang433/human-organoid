@@ -116,7 +116,10 @@ zlim=c(min(res0$Val2),max(res0$Val2)))
 legend("top", legend = levels(as.factor(res$data)), pch = c(16, 17),inset = -0.1, xpd = TRUE, horiz = TRUE)
 legend("right", legend = levels(as.factor(res$time)), col = c(time.cols1),pch=16,inset =-0.05, xpd = TRUE, horiz = F,cex=1.2)
 dev.off()
+```
+<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D1_00.png"/></div>
 
+```R
 #time.cols2 = c(brewer.pal(9,'YlOrRd')[c(2:9)],brewer.pal(11,'BrBG')[rev(1:4)])
 #c25 <- c( "dodgerblue2", "#E31A1C",  "green4", "#6A3D9A",  "#FF7F00",  "black", "gold1", "skyblue2", "#FB9A99",  "palegreen2", "#CAB2D6",  "#FDBF6F", "gray70", "khaki2", "maroon", "orchid1", "deeppink1", "blue1", "steelblue4", "darkturquoise", "green1", "yellow4", "yellow3", "darkorange4", "brown")
 #time.cols2 = c25[1:12]
