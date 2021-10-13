@@ -169,6 +169,6 @@ pdf('corr.plot.bulk.human.vs.org1.pdf')
 corrplot(sim_avg,col=rev(colorRampPalette(brewer.pal(9,'PRGn'))(200)),cl.lim=c(0.7,1),is.corr=F,tl.col="black")
 dev.off()
 ```
-
+<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/corr.plot.bulk.human.vs.org1_00.png"/></div>
 
 
