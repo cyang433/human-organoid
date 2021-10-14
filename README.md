@@ -27,27 +27,14 @@ form.meta2=meta2
 form.meta1$time=form.meta1$Period   
 form.meta2$time=form.meta2$Days
 ```
-
-### Step 1: Find different expression genes at any time
-Use the limma package to perform differential analysis at each time to find differentially expressed genes.
+Then we use the limma package to perform differential analysis at each time to find differentially expressed genes.
 ```R
-DE.list<-function(data,meta) {
-        genes = c()
-        for (t in unique(meta$time)) {
-                condition=as.factor(meta$time==t)
-                design = model.matrix(~0+condition)  # Create a design matrix containing time information             
-                fit=lmFit(data,design)  # Linear model fitting
-                fit = eBayes(fit)  # Bayesian test  
-                top_table = topTable(fit,number=10000)  # Get the differentially expressed gene name
-                genes = c(genes,row.names(top_table[top_table$adj.P.Val<0.05,]))  # combine into a list
-                 }
-        genes = unique(genes)
-        return(genes)
-}
+# The specific information of a function is in "func.r" 
 deg_list1 = DE.list(form.data1,form.meta1)
 deg_list2 = DE.list(form.data2,form.meta2)
 ```
-### Step 2: Focus on expression of interest
+
+### Step 1: Focus on expression of interest
 The genes we are interested in are obtained by taking the intersection of genes differentially expressed in human and organoid cells.
 ```R
 sel.genes = intersect(intersect(deg_list1,deg_list2),unique(all.rec$gene))  # Select genes of interest
@@ -68,7 +55,7 @@ sel.meta2=sel.meta2[order(sel.meta2$time),]
 ps.mat1 = t(exp1);ps.time1=sel.meta1$time
 ps.mat2 = t(exp2);ps.time2=sel.meta2$time
 ```
-### Step 3: Alignment
+### Step 2: Alignment
 ManiNetCluster employs manifold learning to uncover and match local and non-linear structures among networks, and identifies cross-network functional links.We use ManiNetCluster simultaneously aligns and clusters co-expression.
 ```R
 algn_res = runMSMA_dtw(ps.mat1,ps.mat2)
@@ -99,7 +86,7 @@ dev.off()
 ```
 <div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/hmtp_00.png"/></div>
 
-### Step 4: Visualization
+### Step 3: Visualization
 Use the aligned matrix to draw 3D scatter plots for human and organoid,visualize the time information of each point in color.
 ```R
 # plot 3D trajectors
