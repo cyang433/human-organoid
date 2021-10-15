@@ -108,7 +108,7 @@ dev.off()
 ```
 
 <div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D1_300_30_00.png"/></div>
-<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D1_300_30_00.png"/></div>
+<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D1_200_60-2_00.png"/></div>
 
 ```R
 #time.cols2 = c(brewer.pal(9,'YlOrRd')[c(2:9)],brewer.pal(11,'BrBG')[rev(1:4)])
