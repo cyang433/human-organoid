@@ -133,7 +133,7 @@ legend("right", legend = levels(as.factor(res$time)), col = c(time.cols2),pch=16
 dev.off()
 ```
 <div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D2_300_30_00.png"/></div>
-<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D2_300_30_00.png"/></div>
+<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D2_200_60_00.png"/></div>
 
 
 Finally,draw the corrplot on timepoint wise averaged similarity.
