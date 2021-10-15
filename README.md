@@ -107,7 +107,8 @@ legend("right", legend = levels(as.factor(res$time)), col = c(time.cols1),pch=16
 dev.off()
 ```
 
-<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D1_00.png"/></div>
+<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D1_300_30_00.png"/></div>
+<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D1_300_30_00.png"/></div>
 
 ```R
 #time.cols2 = c(brewer.pal(9,'YlOrRd')[c(2:9)],brewer.pal(11,'BrBG')[rev(1:4)])
