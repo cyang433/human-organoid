@@ -62,6 +62,10 @@ algn_res = runMSMA_dtw(ps.mat1,ps.mat2)
 df2 = algn_res[[3]]
 df2$time = c(sel.meta1$time,sel.meta2$time)  # Add the time information to the aligned matrix
 ```
+
+
+### Step 3: Visualization
+Use the aligned result to draw 3D scatter plots for human and organoid,visualize the time information of each point in color.
 ```R
 # calculate pairwise distances between cells after MSMA
 pair_dist = apply(df2[df2$data=='sample1',c(3:5)],1,function(x) {
@@ -86,8 +90,6 @@ dev.off()
 ```
 <div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/hmtp_00.png"/></div>
 
-### Step 3: Visualization
-Use the aligned matrix to draw 3D scatter plots for human and organoid,visualize the time information of each point in color.
 ```R
 # plot 3D trajectors
 pdf('3D1.pdf')
@@ -104,6 +106,7 @@ legend("top", legend = levels(as.factor(res$data)), pch = c(16, 17),inset = -0.1
 legend("right", legend = levels(as.factor(res$time)), col = c(time.cols1),pch=16,inset =-0.05, xpd = TRUE, horiz = F,cex=1.2)
 dev.off()
 ```
+
 <div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D1_00.png"/></div>
 
 ```R
