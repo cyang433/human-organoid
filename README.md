@@ -107,8 +107,7 @@ legend("right", legend = levels(as.factor(res$time)), col = c(time.cols1),pch=16
 dev.off()
 ```
 
-<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D1_300_30_00.png"/></div>
-<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D1_200_60-2_00.png"/></div>
+<img width="450" height="450" src="https://github.com/cyang433/human-organoid/blob/main/3D1_300_30_00.png"/></div><img width="450" height="450" src="https://github.com/cyang433/human-organoid/blob/main/3D1_200_60-2_00.png"/></div>
 
 ```R
 #time.cols2 = c(brewer.pal(9,'YlOrRd')[c(2:9)],brewer.pal(11,'BrBG')[rev(1:4)])
@@ -132,8 +131,8 @@ legend("top", legend = levels(as.factor(res$data)), pch = c(16, 17),inset = -0.1
 legend("right", legend = levels(as.factor(res$time)), col = c(time.cols2),pch=16,inset = -0.05, xpd = TRUE, horiz = F,cex=1.2)
 dev.off()
 ```
-<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D2_300_30_00.png"/></div>
-<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/3D2_200_60_00.png"/></div>
+
+<img width="450" height="450" src="https://github.com/cyang433/human-organoid/blob/main/3D2_300_30_00.png"/></div><img width="450" height="450" src="https://github.com/cyang433/human-organoid/blob/main/3D2_200_60_00.png"/></div>
 
 
 Finally,draw the corrplot on timepoint wise averaged similarity.
