@@ -14,7 +14,8 @@ Users should install the following packages prior to using the code:
 install.packages(c('rdist','SCORPIUS','Rmagic','pheatmap','Linnorm','reshape2','reticulate','plyr','RColorBrewer','stringr','limma','ManiNetCluster','ComplexHeatmap','circlize'))
 # import ManiNetCluster form "https://github.com/daifengwanglab/ManiNetCluster"
 ```
-Besides,bulk cell data of human and organoid and some functions for processing data are also needed for our project.We performed manifold alignment between the bulk transcriptomic data of human brain from BrainSpan and the bulk transcriptomic measurement of organoids in Dataset 5(Table S1).BrainSpan is a landscape measurement database of the developmental procedures of the human brain,covering the in-vivo human brain development from 8PCW until 40 years old,including 28 time points, 36 samples and 25 regions. Dataset 5 is a measurement of longer-term cultured organoids,covering the in vitro 3D culturing of human cortical spheroid (hCS) from 25 days up until 2 years,including 12 time points and 62 samples.
+Besides,bulk cell data of human and organoid and some functions for processing data are also needed for our project.We performed manifold alignment between the bulk transcriptomic data of human brain from BrainSpan and the bulk transcriptomic measurement of organoids in Dataset 5(Table S1).
+BrainSpan is a landscape measurement database of the developmental procedures of the human brain,covering the in-vivo human brain development from 8PCW until 40 years old,including 28 time points, 36 samples and 25 regions. Dataset 5 is a measurement of longer-term cultured organoids,covering the in vitro 3D culturing of human cortical spheroid (hCS) from 25 days up until 2 years,including 12 time points and 62 samples.
 ```R
 source('../src/func.r')
 load('bulk_start.RData')
