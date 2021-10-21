@@ -96,7 +96,7 @@ Heatmap(sim_mat,name='human_vs_humanOrg',show_row_names=F,show_column_names=F,cl
 left_annotation=annot1,top_annotation=annot2,col=colorRamp2(c(0.8,max(sim_dist)),c('white','red')))
 dev.off()
 ```
-<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/hmtp_00.png"/></div>
+<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/image/hmtp_00.png"/></div>
 
 ```R
 # plot 3D trajectors
@@ -136,9 +136,9 @@ legend("top", legend = levels(as.factor(res$data)), pch = c(16, 17),inset = -0.1
 legend("right", legend = levels(as.factor(res$time)), col = c(time.cols2),pch=16,inset = -0.05, xpd = TRUE, horiz = F,cex=1.2)
 dev.off()
 ```
-<img width="400" height="400" src="https://github.com/cyang433/human-organoid/blob/main/3D1_300_30_00.png"/></div><img width="400" height="400" src="https://github.com/cyang433/human-organoid/blob/main/3D1_200_60-2_00.png"/></div>
+<img width="400" height="400" src="https://github.com/cyang433/human-organoid/blob/main/image/3D1_300_30_00.png"/></div><img width="400" height="400" src="https://github.com/cyang433/human-organoid/blob/main/image/3D1_200_60-2_00.png"/></div>
 
-<img width="400" height="400" src="https://github.com/cyang433/human-organoid/blob/main/3D2_300_30_00.png"/></div><img width="400" height="400" src="https://github.com/cyang433/human-organoid/blob/main/3D2_200_60_00.png"/></div>
+<img width="400" height="400" src="https://github.com/cyang433/human-organoid/blob/main/image/3D2_300_30_00.png"/></div><img width="400" height="400" src="https://github.com/cyang433/human-organoid/blob/main/image/3D2_200_60_00.png"/></div>
 
 
 Finally,draw the corrplot on timepoint wise averaged similarity.
@@ -167,6 +167,6 @@ pdf('corr.plot.bulk.human.vs.org1.pdf')
 corrplot(sim_avg,col=rev(colorRampPalette(brewer.pal(9,'PRGn'))(200)),cl.lim=c(0.7,1),is.corr=F,tl.col="black")
 dev.off()
 ```
-<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/corr.plot.bulk.human.vs.org1_00.png"/></div>
+<div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/image/corr.plot.bulk.human.vs.org1_00.png"/></div>
 
 
