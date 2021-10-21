@@ -43,7 +43,7 @@ deg_list2 = DE.list(form.data2,form.meta2)
 ```
 
 ### Step 1: Focus on expression of interest
-The genes we are interested in are obtained by taking the intersection of genes differentially expressed in human and organoid cells.
+To focus our analysis within brain development only, we attempted to identify 1533 genes most related to human brain development.We take the intersection of genes that are differentially expressed in human and organoid cells, and then take the intersection with these 1533 genes to get the genes we are interested in.
 ```R
 sel.genes = intersect(intersect(deg_list1,deg_list2),unique(all.rec$gene))  # Select genes of interest
 sel.data1 = form.data1[row.names(form.data1) %in% sel.genes,]  # Select expression based genes
@@ -98,6 +98,7 @@ dev.off()
 ```
 <div align=center><img width="500" height="500" src="https://github.com/cyang433/human-organoid/blob/main/image/hmtp_00.png"/></div>
 
+Embedding of human brain samples in the aligned manifold space. Dots were colored by brain developmental stages.
 ```R
 # plot 3D trajectors
 pdf('3D1.pdf')
@@ -114,6 +115,8 @@ legend("top", legend = levels(as.factor(res$data)), pch = c(16, 17),inset = -0.1
 legend("right", legend = levels(as.factor(res$time)), col = c(time.cols1),pch=16,inset =-0.05, xpd = TRUE, horiz = F,cex=1.2)
 dev.off()
 ```
+
+Embedding of human organoid samples in the manifold space. Dots were colored by the days of culturing. 
 ```R
 #time.cols2 = c(brewer.pal(9,'YlOrRd')[c(2:9)],brewer.pal(11,'BrBG')[rev(1:4)])
 #c25 <- c( "dodgerblue2", "#E31A1C",  "green4", "#6A3D9A",  "#FF7F00",  "black", "gold1", "skyblue2", "#FB9A99",  "palegreen2", "#CAB2D6",  "#FDBF6F", "gray70", "khaki2", "maroon", "orchid1", "deeppink1", "blue1", "steelblue4", "darkturquoise", "green1", "yellow4", "yellow3", "darkorange4", "brown")
@@ -141,7 +144,7 @@ dev.off()
 <img width="400" height="400" src="https://github.com/cyang433/human-organoid/blob/main/image/3D2_300_30_00.png"/></div><img width="400" height="400" src="https://github.com/cyang433/human-organoid/blob/main/image/3D2_200_60_00.png"/></div>
 
 
-Finally,draw the corrplot on timepoint wise averaged similarity.
+Finally,draw the corrplot on timepoint wise averaged similarity.The outcome shows the similarity of aligned samples. 
 ```R
 library(corrplot)
 sim_avg = matrix(0,nrow=length(unique(ps.time1)),ncol=length(unique(ps.time2)))
