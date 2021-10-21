@@ -5,7 +5,7 @@
 As shown in the flowchart below,here we introduce the comparative analysis pipeline for aligning human and organoid developmental transcriptomic datasets.manifold alignment mainly contains two steps: global alignment and local alignment.
 
 
-<div align=center><img width="1000" height="500" src="https://github.com/cyang433/human-organoid/blob/main/1.png"/></div>
+<div align=center><img width="1000" height="500" src="https://github.com/cyang433/human-organoid/blob/main/image/1.png"/></div>
 
 ## Software Requirements
 The analysis is based on R 4.0. 
